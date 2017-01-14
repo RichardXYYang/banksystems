@@ -19,6 +19,8 @@ def login(request):
  		MyLoginForm = LoginForm(request.POST)
  		if MyLoginForm.is_valid():
  			username = MyLoginForm.cleaned_data['username']
- 		else:
- 			MyLoginForm = Loginform()
- 	return render(request, 'home.html', {"username" : username})
+			password =  MyLoginForm.cleaned_data['password']
+			MyLoginForm = LoginForm(username=username, password=password);
+		else:
+			MyLoginForm = LoginForm(username=username, password='aaaa');
+	return render(request, 'home.html', {"username" : username})
