@@ -14,6 +14,7 @@ def home(request):
 
 def login(request):
 	username = "not logged in"
+ 	username.upper();
  	if request.method == "POST":
  #Get the posted form
  		MyLoginForm = LoginForm(request.POST)
