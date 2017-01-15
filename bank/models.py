@@ -10,7 +10,7 @@ class Musician(models.Model):
     last_name = models.CharField(max_length=50)
     instrument = models.CharField(max_length=100)
 
-
+#lol
 class LoginForm(forms.Form):
 	username = forms.CharField(max_length=100)
 	password = forms.CharField(widget=forms.PasswordInput())
