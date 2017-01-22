@@ -25,3 +25,6 @@ def login(request):
 		else:
 			MyLoginForm = LoginForm(username=username, password='aaaa');
 	return render(request, 'home.html', {"username" : username})
+
+
+#brianwashere
